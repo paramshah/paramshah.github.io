@@ -455,6 +455,7 @@ img {
 	color:#666666;
 }
 .parallax-banner-1 {background-image: url('../images/product-bg.jpg');}
+.parallax-banner-2 {background-image: url('../images/knowledge-base.png');}
 .parallax-background {
 	position: absolute;
     opacity: 0.4;
