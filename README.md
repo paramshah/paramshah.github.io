@@ -7,4 +7,4 @@
 ```npm start``` or ```node server.js```
 
 ####To view website navigate to 
-```http://localhost:8080```
+http://localhost:8080
