@@ -1,5 +1,7 @@
 #The Oncospace Informational Landing page
 
+need to move all files into a public folder first
+
 ####To install necessary dependencies 
 ```npm install```
 
