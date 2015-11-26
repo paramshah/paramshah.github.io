@@ -62,7 +62,7 @@ small { font-size: 80%; }
 
 /*	Blockquotes  */
 
-blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #2A83ED; font-style: italic; }
+blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #60b44b; font-style: italic; }
 blockquote { margin: 0 0 20px; padding: 9px 20px 0 19px; border-left: 1px solid #DDDDDD; }
 blockquote cite { display: block; font-size: 12px; color: #999999; }
 blockquote cite:before { content: "\2014 \0020"; }
@@ -75,7 +75,7 @@ hr { border: solid #DDDDDD; border-width: 1px 0 0; clear: both; margin: 20px 0 4
 
 a, 
 a:visited { 
-	color: #2A83ED; 
+	color: #60b44b; 
 	text-decoration: none; 
 	outline: 0;
 	-webkit-transform: translateZ(0);
@@ -102,7 +102,7 @@ ul ul li, ul ol li,
 ol ol li, ol ul li { margin-bottom: 6px; }
 ul.large li { line-height: 21px; }
 li p { line-height: 21px; }
-.icons-ul i { color:#2A83ED; }
+.icons-ul i { color:#60b44b; }
 
 /* #Images
 ================================================== */
@@ -211,7 +211,7 @@ img {
 	font-weight:normal;
 }
 .entry-slogan {
-	color:#2A83ED;
+	color:#60b44b;
 	font-size:1.2em;
 	font-family: 'robotolight', Helvetica, Arial, sans-serif;
 	font-weight:normal;
@@ -374,8 +374,8 @@ img {
 .info { text-align:center; margin-bottom:40px; }
 
 .info:hover .main-icon {
-	color:#2A83ED;
-	border-color:#2A83ED;
+	color:#60b44b;
+	border-color:#60b44b;
 	-webkit-transition:0.2s all linear;
 		-moz-transition:0.2s all linear;
 			transition:0.2s all linear;
@@ -485,7 +485,9 @@ img {
 	color:#444444;
 	line-height:inherit;
 	text-transform:uppercase;
-	font-family: 'robotolight', Helvetica, Arial, sans-serif;
+	font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    letter-spacing: .08em;
+	font-weight:100;
 }
 .site-branding a {
 	display:block;
@@ -516,7 +518,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-	background:#2A83ED;
+	background:#60b44b;
   	border: none;
 	display: inline-block;
 	font-size: 20px;
@@ -625,7 +627,7 @@ textarea:focus {
 	min-height:inherit;	
 }
 .product {
-	background:#2A83ED;
+	background:#60b44b;
 }
 .product .grid-100 {
 	padding:100px 0;
@@ -648,7 +650,7 @@ textarea:focus {
 }
 .product .product-link {
 	background:#FFFFFF;
-	color:#2A83ED;
+	color:#60b44b;
 }
 .product .product-link:hover {
 	background:#555555;
