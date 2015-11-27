@@ -390,7 +390,7 @@ img {
 			transition:0.2s all linear;
 }
 .learn-more { display:block; }
-.learn-more i { padding-right:7px; }
+.learn-more i { padding-right:7px; color:#60b44b;}
 
 /* #Gallery Section
 ================================================== */
