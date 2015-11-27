@@ -493,7 +493,7 @@ img {
 .parallax-banner-2 {background-image: url('../images/knowledge-base.png');}
 .parallax-background {
 	position: absolute;
-    opacity: 0.4;
+    opacity: 0.2;
 	width: 150%;
 	height: 100%;
 	margin: 0 auto;
