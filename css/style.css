@@ -449,6 +449,22 @@ img {
 	  -moz-border-radius: 3px;
 		  border-radius: 3px;
 }
+.newsletter-form-2 .newsletter-text-2 {
+	margin:0 20px 20px auto;
+	background:transparent;
+	border:1px solid #000000;
+	display: inline-block;
+	font-size: 20px;
+	height:23px;
+	text-decoration: none;
+	line-height: normal;
+	padding: 10px;
+	font-family: 'robotolight', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	-webkit-border-radius: 3px;
+	  -moz-border-radius: 3px;
+		  border-radius: 3px;
+}
 
 /* #Parallax
 ================================================== */
