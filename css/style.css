@@ -239,6 +239,13 @@ img {
 	padding-top:350px;
 	padding-bottom:80px;
 }
+.product .grid-200 {
+	position:relative;
+	display:table-cell;
+	vertical-align:top;
+	padding-top:250px;
+	padding-bottom:80px;
+}
 .product-title {
 	font-size:3em;
 	margin-bottom:10px;
