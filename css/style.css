@@ -613,7 +613,6 @@ form { margin:0; }
 input[type="text"],
 input[type="password"],
 input[type="email"],
-input[type="inst-form"],
 textarea {
 	font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	border: 1px solid #FFFFFF;
@@ -622,6 +621,23 @@ textarea {
 	color: #666666;
 	margin: 0;
 	min-width: 200px;
+	max-width: 100%;
+	display: block;
+	margin-bottom: 20px;
+	background: #FFFFFF;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+input[type="inst-form"],
+textarea {
+	font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	border: 1px solid #FFFFFF;
+	padding: 10px;
+	outline: none;
+	color: #000000;
+	margin: 0;
+	min-width: 300px;
 	max-width: 100%;
 	display: block;
 	margin-bottom: 20px;
