@@ -50,6 +50,9 @@
   	<script src="js/jquery.min.js"></script>
 	<script src="js/modernizr.js"></script>
     <script src="js/respond.src.js"></script>
+    <script type="text/javascript" src="js/d3.min.js"></script>
+    <script type="text/javascript" src="js/radialProgress.js"></script>    
+
     
 </head>
 <body id="mainsite">
@@ -73,7 +76,6 @@
                 <li><a href="#products">Services</a></li>
 				<li><a href="#gallery">Institutions</a></li>
 				<li><a href="#newsletter">Learn More</a></li>
-				<!-- <li class="ut-cta"><a class="ut-navigation-cta" href="http://themeforest.net/user/UnitedThemes/portfolio?ref=unitedthemes">Download now<i class="icon-cloud-download"></i></a></li> -->
 			</ul>
         </nav>
         </div>
@@ -140,9 +142,6 @@
 
                 <!-- <a class="learn-more" href="#"><i class="icon-li icon-chevron-sign-right"></i>Learn more</a> -->
             </div><!-- close icon box -->
-
-
-            
             
             <div class="clear hide-on-mobile hide-on-tablet"></div>
 
@@ -170,7 +169,6 @@
                 
                 <p>Our Knowledge Base is a database made up of previous treatment plans that describes the radiation dose given for different shapes and contours of tumors. It is backed by the Oncospace Consortium, a network of institutions that feeds specialized data into the platform.</p>
 
-                
                 <!-- icons ul -->
                 <ul class="icons-ul">
                   <li><i class="icon-li icon-chevron-sign-right"></i>Allows user to utilize whole Knowledge Base or specific segments</li>
@@ -180,8 +178,9 @@
                 <!-- <a class="product-link">Learn more<i class="icon-li icon-chevron-sign-right"></i></a> -->
                 
                     <p class="entry-slogan">Our Collaborators:</p>
-                <div class="grid-45 suffix-5 mobile-grid-100 tablet-grid-50 cbp-so-side-left cbp-so-side">
+                <div class="grid-45 suffix-5 mobile-grid-50 tablet-grid-50 cbp-so-side-left cbp-so-side">
                     <img src="images/john-hopkins-logo.png"></img>
+                
                 </div>
                 
         	</div>
@@ -194,11 +193,6 @@
     <section class="product-right cbp-so-section cbp-so-init">
     	<div class="grid-container">
         
-            <!-- prodcut image right -->
-            <div class="product-image grid-50 mobile-grid-100 tablet-grid-50 cbp-so-side-right cbp-so-side">
-            	<img src="images/product-image-right.png" alt="prdocut-right">
-        	</div><!-- close product image right -->
-            	
     		<div class="grid-45 suffix-5 mobile-grid-100 tablet-grid-50 cbp-so-side-left cbp-so-side">
             	
                 <!-- entry header -->
@@ -213,6 +207,14 @@
                <!-- <a class="product-link">Watch the video<i class="icon-play-circle"></i></a> -->
 
         	</div>
+            <!-- prodcut image right -->
+            <div class="product-right grid-50 mobile-grid-100 tablet-grid-50 cbp-so-side-right cbp-so-side">
+            	
+                <div class="product-right grid-100 mobile-grid-100 tablet-grid-50 cbp-so-side-right cbp-so-side" id="div1"></div>
+                <div class="product-right grid-50 mobile-grid-100 tablet-grid-50 cbp-so-side-right cbp-so-side" id="div2"></div>
+
+        	</div><!-- close product image right -->
+            	
             
         </div><!-- close grid container -->
     </section><!-- close section product right -->
@@ -325,24 +327,6 @@
                 
                 <!-- social icons -->
                 <ul class="social-icons clearfix">
-                
-                    <!-- <li>
-                    <a href="#">
-                    <span class="icon-stack">
-                        <i class="icon-circle-blank icon-stack-base"></i>
-                        <i class="icon-facebook"></i>
-                    </span>
-                    </a>
-                    </li> -->
-                    
-                    <!-- <li>
-                    <a href="#">
-                    <span class="icon-stack">
-                        <i class="icon-circle-blank icon-stack-base"></i>
-                        <i class="icon-twitter"></i>
-                    </span>
-                    </a>
-                    </li> -->
                     
                     <li>
                     <a href="mailto:oncospace@gmail.com">
@@ -383,24 +367,38 @@
     
 	<script src="js/jquery.custom.js"></script>
 	
-    <script type="text/javascript">
-    /* <![CDATA[ */
-		
-		(function($){
-	
-		"use strict";
-    		
-			$(document).ready(function(){
-	
-
-			});
-			
-		})(jQuery);
-		
-	 /* ]]> */	
-    </script>
     
 <!-- End Document
 ================================================== -->
 </body>
+
+<script language="JavaScript">
+
+    var div1=d3.select(document.getElementById('div1'));
+    var div2=d3.select(document.getElementById('div2'));
+    
+    start();
+    
+    function start() {
+
+        var rp1 = radialProgress(document.getElementById('div1'))
+                .label("Manual Optimization")
+                .diameter(180)
+                .value(25)
+                .render();
+
+        var rp2 = radialProgress(document.getElementById('div2'))
+                .label("Optimization Engine")
+                .diameter(180)
+                .value(3)
+                .render();
+
+
+    }
+
+
+
+
+
+</script>
 </html>

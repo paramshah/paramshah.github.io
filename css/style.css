@@ -75,7 +75,6 @@ hr { border: solid #DDDDDD; border-width: 1px 0 0; clear: both; margin: 20px 0 4
 
 a, 
 a:visited { 
-	color: #60b44b; 
 	text-decoration: none; 
 	outline: 0;
 	-webkit-transform: translateZ(0);
@@ -293,7 +292,6 @@ img {
 .product-link i {
 	padding-left:5px;
 	padding-right:5px;
-    color: white;
 }
 .product-image img {
 	margin:0 auto;
@@ -901,4 +899,55 @@ textarea:focus {
 .grid-parent {
   padding-left: 0;
   padding-right: 0;
+}
+
+
+/* Radials */
+
+#outer {
+    background:#FFFFFF;
+    border-radius: 5px;
+    color: #FFFFFF;
+}
+
+#div1, #div2, #div3, #div4 {
+    width: 250px;
+    height: 250px;
+    padding-left: 80px;
+    text-align: center;
+}
+#div1 .arc {
+    stroke-weight: 0.05;
+    fill: #c32323;
+}
+#div1 .arc2 {
+    stroke-weight: 0.05;
+    fill: #c32323;
+}
+#div2 .arc {
+    stroke-weight: 0.05;
+    fill: #60b44b;
+}
+
+#div2 .arc2 {
+    stroke-weight: 0.05;
+    fill: #ab43f7;
+}
+
+
+.radial {
+    border-radius: 3px;
+    background: #FFFFFF;
+    color: #484848;
+    padding-right: 100px;
+
+}
+
+.background {
+    fill: #FFFFFF;
+    fill-opacity: 0.01;
+}
+
+.component {
+    fill: #5d5d5d;
 }
