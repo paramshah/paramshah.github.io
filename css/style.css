@@ -613,6 +613,7 @@ form { margin:0; }
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="inst-form"],
 textarea {
 	font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	border: 1px solid #FFFFFF;
@@ -635,6 +636,11 @@ input[type="email"]:focus,
 textarea:focus {
 	border: 1px solid #FFFFFF;
 	color: #FFFFFF;
+}
+input[type="inst-form"]:focus,
+textarea:focus {
+	border: 1px solid #000000;
+	color: #000000;
 }
 
 /* #Misc
