@@ -690,6 +690,15 @@ textarea:focus {
 	left: 3px;
 	color: #99a1a7;
 }
+#check-title {
+	font: 13px "HelveticaNeue";
+	color: #000000;
+}
+#check-label {
+	font: 13px "HelveticaNeue";
+	color: #000000;
+}
+
 
 
 /* #Misc
