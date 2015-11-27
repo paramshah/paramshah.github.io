@@ -415,9 +415,15 @@ img {
 	color:#FFFFFF;
 	font-family: 'robotothin', Helvetica, Arial, sans-serif;
 }
+.newsletter-title-2 {
+	font-size:2.5em;
+	margin-bottom:10px;
+	color:#000000;
+	font-family: 'robotothin', Helvetica, Arial, sans-serif;
+}
 .newsletter-slogan {
 	font-size:1.2em;
-	color:#FFFFFF;
+	color:#000000;
 	font-family: 'robotolight', Helvetica, Arial, sans-serif;
 	font-weight:normal;
 }
