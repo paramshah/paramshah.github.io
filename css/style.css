@@ -423,6 +423,12 @@ img {
 }
 .newsletter-slogan {
 	font-size:1.2em;
+	color:#FFFFFF;
+	font-family: 'robotolight', Helvetica, Arial, sans-serif;
+	font-weight:normal;
+}
+.newsletter-slogan-2 {
+	font-size:1.2em;
 	color:#000000;
 	font-family: 'robotolight', Helvetica, Arial, sans-serif;
 	font-weight:normal;
