@@ -526,6 +526,8 @@ img {
 	background: #F8F8F8;
 	padding: 80px 0;
 	text-align:center;
+}.footer a{
+	color: #60b44b;
 }
 .footer .site-branding {
 	float:none;
