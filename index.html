@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
+	<!-- Document Title
+	============================================= -->
+	<title>Pharos Biologicals</title>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="transparent-header full-header">
+
+			<div id="header-wrap">
+
+				<div class="container clearfix">
+
+					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+					<!-- Logo
+					=============================================
+					<!-- <div id="logo">
+						<a href="index.html" class="standard-logo" data-dark-logo="images/PharosLogo-alt.png"><img src="images/PharosLogo-alt.png"  alt="Canvas Logo" style="padding-top:20px"></a>
+						<a href="index.html" class="retina-logo" data-dark-logo="images/PharosLogo-alt.png"><img src="images/PharosLogo-alt.png"  alt="Canvas Logo"></a>
+					</div> --><!-- #logo end -->
+
+					<!-- Primary Navigation
+					============================================= -->
+					<nav id="primary-menu" class="dark">
+
+						<ul>
+							<li class="current"><a href="index.html"><div>Home</div></a>
+							</li>
+
+						</ul>
+
+					</nav> --><!-- #primary-menu end -->
+
+				</div>
+
+			</div>
+
+		</header> --><!-- #header end -->
+
+		<section id="slider" class="slider-parallax swiper_wrapper full-screen clearfix">
+
+			<div class="swiper-container swiper-parent">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide dark">
+						<div class="container clearfix">
+							<div class="slider-caption slider-caption-center">
+								<img data-caption-animate="fadeInUp" src="images/PharosLogo-alt.png" style="width:15%;padding-bottom:30px">
+								<h2 data-caption-animate="fadeInUp">A beacon of light on vaccine discovery</h2>
+								<img data-caption-animate="fadeInUp" src="images/zika-map.png" style="width:50%;">
+
+								<!-- <p data-caption-animate="fadeInUp" data-caption-delay="200">Company Announcement Coming Soon</p> -->
+							</div>
+						</div>
+						<div class="video-wrap">
+							<video id="slide-video" poster="images/videos/explore.jpg" preload="auto" loop autoplay muted>
+								<!-- <source src='images/videos/explore.webm' type='video/webm' /> -->
+								<source src='images/videos/team-doctors copy.mp4' type='video/mp4' />
+							</video>
+							<div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<script>
+				jQuery(document).ready(function($){
+					var swiperSlider = new Swiper('.swiper-parent',{
+						paginationClickable: false,
+						slidesPerView: 1,
+						grabCursor: true,
+						loop: true,
+						onSwiperCreated: function(swiper){
+							$('[data-caption-animate]').each(function(){
+								var $toAnimateElement = $(this);
+								var toAnimateDelay = $(this).attr('data-caption-delay');
+								var toAnimateDelayTime = 0;
+								if( toAnimateDelay ) { toAnimateDelayTime = Number( toAnimateDelay ) + 750; } else { toAnimateDelayTime = 750; }
+								if( !$toAnimateElement.hasClass('animated') ) {
+									$toAnimateElement.addClass('not-animated');
+									var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+									setTimeout(function() {
+										$toAnimateElement.removeClass('not-animated').addClass( elementAnimation + ' animated');
+									}, toAnimateDelayTime);
+								}
+							});
+							SEMICOLON.slider.swiperSliderMenu();
+						},
+						onSlideChangeStart: function(swiper){
+							$('[data-caption-animate]').each(function(){
+								var $toAnimateElement = $(this);
+								var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+								$toAnimateElement.removeClass('animated').removeClass(elementAnimation).addClass('not-animated');
+							});
+							SEMICOLON.slider.swiperSliderMenu();
+						},
+						onSlideChangeEnd: function(swiper){
+							$('#slider').find('.swiper-slide').each(function(){
+								if($(this).find('video').length > 0) { $(this).find('video').get(0).pause(); }
+								if($(this).find('.yt-bg-player').length > 0) { $(this).find('.yt-bg-player').pauseYTP(); }
+							});
+							$('#slider').find('.swiper-slide:not(".swiper-slide-active")').each(function(){
+								if($(this).find('video').length > 0) {
+									if($(this).find('video').get(0).currentTime != 0 ) $(this).find('video').get(0).currentTime = 0;
+								}
+								if($(this).find('.yt-bg-player').length > 0) {
+									$(this).find('.yt-bg-player').getPlayer().seekTo( $(this).find('.yt-bg-player').attr('data-start') );
+								}
+							});
+							if( $('#slider').find('.swiper-slide.swiper-slide-active').find('video').length > 0 ) { $('#slider').find('.swiper-slide.swiper-slide-active').find('video').get(0).play(); }
+							if( $('#slider').find('.swiper-slide.swiper-slide-active').find('.yt-bg-player').length > 0 ) { $('#slider').find('.swiper-slide.swiper-slide-active').find('.yt-bg-player').playYTP(); }
+
+							$('#slider .swiper-slide.swiper-slide-active [data-caption-animate]').each(function(){
+								var $toAnimateElement = $(this);
+								var toAnimateDelay = $(this).attr('data-caption-delay');
+								var toAnimateDelayTime = 0;
+								if( toAnimateDelay ) { toAnimateDelayTime = Number( toAnimateDelay ) + 300; } else { toAnimateDelayTime = 300; }
+								if( !$toAnimateElement.hasClass('animated') ) {
+									$toAnimateElement.addClass('not-animated');
+									var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+									setTimeout(function() {
+										$toAnimateElement.removeClass('not-animated').addClass( elementAnimation + ' animated');
+									}, toAnimateDelayTime);
+								}
+							});
+						}
+					});
+
+					$('#slider-arrow-left').on('click', function(e){
+						e.preventDefault();
+						swiperSlider.swipePrev();
+					});
+
+					$('#slider-arrow-right').on('click', function(e){
+						e.preventDefault();
+						swiperSlider.swipeNext();
+					});
+				});
+			</script>
+
+			<a href="#" data-scrollto="#content" data-offset="100" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
+
+		</section>
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap">
+
+					<div class="container clearfix">
+
+
+						<div class="col_half nobottommargin col_last">
+
+							<div class="heading-block topmargin-lg">
+								<h2>Pharos Biologicals</h2>
+							</div>
+
+							<p class="lead"><strong>Pharos</strong> Biologicals is a development-stage company focused on the preclinical to Phase 1 clinical design and evaluation of advanced DNA vaccines and vaccine delivery technologies for prevention of flavivirus and influenza virus infections.</p>
+
+
+						</div>
+
+						<div class="col_half nobottommargin topmargin-lg">
+
+							<img src="images/leaf.png" alt="Image" class="center-block" style="width:75%">
+
+						</div>
+
+
+					</div>
+
+				<div class="clear"></div>
+
+				<div class="container clearfix">
+
+					<div class="fancy-title">
+						<h3>Our Team</h3>
+					</div>
+
+					<div class="col_one_third">
+
+						<div class="team">
+							<div class="team-image">
+								<img src="images/Mao-Hai-Quan.jpg" alt="John Doe">
+							</div>
+							<div class="team-desc">
+								<div class="team-title"><h4>J. Thomas August</h4><span>Position</span></div>
+								<p>Dr. J. Thomas August ladaasdfasdfasdf;askldfasj fd;alsjdf;ajsfd;asjdfas;df</p>
+								<!-- <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
+									<i class="icon-facebook"></i>
+									<i class="icon-facebook"></i>
+								</a>
+								<a href="#" class="social-icon inline-block si-small si-light si-rounded si-twitter">
+									<i class="icon-twitter"></i>
+									<i class="icon-twitter"></i>
+								</a>
+								<a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">
+									<i class="icon-gplus"></i>
+									<i class="icon-gplus"></i>
+								</a> -->
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col_one_third">
+
+						<div class="team">
+							<div class="team-image">
+								<img src="images/Mao-Hai-Quan.jpg" alt="Josh Thompson">
+							</div>
+							<div class="team-desc">
+								<div class="team-title"><h4>David Wise</h4><span>Position</span></div>
+								<!-- <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
+									<i class="icon-facebook"></i>
+									<i class="icon-facebook"></i>
+								</a>
+								<a href="#" class="social-icon inline-block si-small si-light si-rounded si-twitter">
+									<i class="icon-twitter"></i>
+									<i class="icon-twitter"></i>
+								</a>
+								<a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">
+									<i class="icon-gplus"></i>
+									<i class="icon-gplus"></i>
+								</a> -->
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col_one_third col_last">
+
+						<div class="team">
+							<div class="team-image">
+								<img src="images/Mao-Hai-Quan.jpg" alt="Mary Jane">
+							</div>
+							<div class="team-desc">
+								<div class="team-title"><h4>Hai-Quan Mao</h4><span>Position</span></div>
+								<!-- <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
+									<i class="icon-facebook"></i>
+									<i class="icon-facebook"></i>
+								</a>
+								<a href="#" class="social-icon inline-block si-small si-light si-rounded si-twitter">
+									<i class="icon-twitter"></i>
+									<i class="icon-twitter"></i>
+								</a>
+								<a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">
+									<i class="icon-gplus"></i>
+									<i class="icon-gplus"></i>
+								</a> -->
+							</div>
+						</div>
+
+					</div>
+
+					<div class="clear"></div>
+
+					<div class="container clearfix">
+
+						<div id="oc-clients" class="owl-carousel image-carousel">
+
+							<div class="oc-item"><a href="#"><img src="images/john-hopkins-logo.png" alt="Clients"></a></div>
+							<div class="oc-item"><a href="#"><img src="images/john-hopkins-logo.png" alt="Clients"></a></div>
+							<div class="oc-item"><a href="#"><img src="images/john-hopkins-logo.png" alt="Clients"></a></div>
+							<div class="oc-item"><a href="#"><img src="images/john-hopkins-logo.png" alt="Clients"></a></div>
+							<div class="oc-item"><a href="#"><img src="images/john-hopkins-logo.png" alt="Clients"></a></div>
+
+						</div>
+
+						<script type="text/javascript">
+
+							jQuery(document).ready(function($) {
+
+								var ocClients = $("#oc-clients");
+
+								ocClients.owlCarousel({
+									margin: 60,
+									loop: true,
+									nav: false,
+									autoplay: true,
+									dots: false,
+									autoplayHoverPause: true,
+									responsive:{
+										0:{ items:2 },
+										480:{ items:3 },
+										768:{ items:4 },
+										992:{ items:5 },
+										1200:{ items:6 }
+									}
+								});
+
+							});
+
+						</script>
+
+					</div>
+
+
+				<!-- <div class="container clearfix">
+
+					<div class="row topmargin-lg bottommargin-sm">
+
+						<div class="heading-block center">
+							<h2>Even more Feature Rich</h2>
+							<span class="divcenter">Philanthropy convener livelihoods, initiative end hunger gender rights local. John Lennon storytelling; advocate, altruism impact catalyst.</span>
+						</div>
+
+						<div class="col-md-4 col-sm-6 bottommargin">
+
+							<div class="feature-box fbox-right topmargin" data-animate="fadeIn">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-line-heart"></i></a>
+								</div>
+								<h3>Boxed &amp; Wide Layouts</h3>
+								<p>Stretch your Website to the Full Width or make it boxed to surprise your visitors.</p>
+							</div>
+
+							<div class="feature-box fbox-right topmargin" data-animate="fadeIn" data-delay="200">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-line-paper"></i></a>
+								</div>
+								<h3>Extensive Documentation</h3>
+								<p>We have covered each &amp; everything in our Docs including Videos &amp; Screenshots.</p>
+							</div>
+
+							<div class="feature-box fbox-right topmargin" data-animate="fadeIn" data-delay="400">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-line-layers"></i></a>
+								</div>
+								<h3>Parallax Support</h3>
+								<p>Display your Content attractively using Parallax Sections with HTML5 Videos.</p>
+							</div>
+
+						</div>
+
+						<div class="col-md-4 hidden-sm bottommargin center">
+							<img src="images/services/iphone7.png" alt="iphone 2">
+						</div>
+
+						<div class="col-md-4 col-sm-6 bottommargin">
+
+							<div class="feature-box topmargin" data-animate="fadeIn">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-line-power"></i></a>
+								</div>
+								<h3>HTML5 Video</h3>
+								<p>Canvas provides support for Native HTML5 Videos that can be added to a Background.</p>
+							</div>
+
+							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="200">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-line-check"></i></a>
+								</div>
+								<h3>Endless Possibilities</h3>
+								<p>Complete control on each &amp; every element that provides endless customization.</p>
+							</div>
+
+							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="400">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-bulb"></i></a>
+								</div>
+								<h3>Light &amp; Dark Color Schemes</h3>
+								<p>Change your Website's Primary Scheme instantly by simply adding the dark class.</p>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+
+				<div class="container clearfix">
+
+					<div class="col_half">
+						<img src="images/PharosLogo-alt.png" alt="" class="footer-logo" style="width:20%">
+
+						Copyrights &copy; 2016 All Rights Reserved by Pharos Biologicals
+					</div>
+
+					<div class="col_half col_last tright">
+						<!-- <div class="copyrights-menu copyright-links fright clearfix">
+							<a href="#">Home</a>/<a href="#">About</a>/<a href="#">Features</a>/<a href="#">Portfolio</a>/<a href="#">FAQs</a>/<a href="#">Contact</a>
+						</div> -->
+
+
+					</div>
+
+				</div>
+
+			</div><!-- #copyrights end -->
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script type="text/javascript" src="js/functions.js"></script>
+
+</body>
+</html>
