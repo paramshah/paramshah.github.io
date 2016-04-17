@@ -3205,8 +3205,8 @@ body.side-panel-open:not(.device-xxs):not(.device-xs):not(.device-sm) .body-over
 #page-title {
 	position: relative;
 	padding: 50px 0;
-	background-color: #F5F5F5;
-	border-bottom: 1px solid #EEE;
+	background-color: #ffffff;
+	/*border-bottom: 1px solid #EEE;*/
 }
 
 #page-title .container { position: relative; }
@@ -5427,7 +5427,7 @@ body:not(.device-touch) .entry-link {
 .ipost .entry-title h4 a { color: #333; }
 
 .ipost .entry-title h3 a:hover,
-.ipost .entry-title h4 a:hover { color: #1ABC9C; }
+.ipost .entry-title h4 a:hover { color: #607590; }
 
 .ipost .entry-meta { margin-right: -10px; }
 
@@ -9651,9 +9651,9 @@ body:not(.device-touch) .clients-grid li a {
 
 .team-title span {
 	display: block;
-	color: #1ABC9C;
+	color: #607590;
 	font-weight: 400;
-	font-family: 'Crete Round', serif;
+	font-family: 'Lato', sans-serif;
 	font-style: italic;
 	font-size: 15px;
 	margin-top: 5px;
