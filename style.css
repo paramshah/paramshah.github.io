@@ -26,19 +26,19 @@ dl, dt, dd, ol, ul, li {
 }
 
 ::selection {
-	background: #1ABC9C;
+	background: #b2b2b2;
 	color: #FFF;
 	text-shadow: none;
 }
 
 ::-moz-selection {
-	background: #1ABC9C; /* Firefox */
+	background: #b2b2b2; /* Firefox */
 	color: #FFF;
 	text-shadow: none;
 }
 
 ::-webkit-selection {
-	background: #1ABC9C; /* Safari */
+	background: #b2b2b2; /* Safari */
 	color: #FFF;
 	text-shadow: none;
 }
@@ -6691,7 +6691,7 @@ body:not(.device-touch) .button {
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
-.button.button-dark:hover { background-color: #1ABC9C; }
+.button.button-dark:hover { background-color: #AF0400; }
 
 .button.button-mini {
 	padding: 0 14px;
@@ -6997,7 +6997,7 @@ body:not(.device-touch) .button.button-reveal span {
 
 .button.button-full strong {
 	font-weight: 600;
-	border-bottom: 2px solid #EEE;
+	/*border-bottom: 2px solid #EEE;*/
 }
 
 body:not(.device-touch) .button.button-full strong {

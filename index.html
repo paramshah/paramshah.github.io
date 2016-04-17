@@ -63,15 +63,13 @@
 						<ul>
 							<li><a href="#about"><div>About</div></a>
 							</li>
-							<li><a href="index.html"><div>Technology</div></a>
-							</li>
-							<li><a href="index.html"><div>Zika</div></a>
+							<li><a href="#zika"><div>Zika</div></a>
 							</li>
 							<li><a href="#team"><div>Team</div></a>
 							</li>
-							<li><a href="index.html"><div>Media</div></a>
+							<li><a href="#media"><div>Media</div></a>
 							</li>
-							<li><a href="index.html"><div>Contact</div></a>
+							<li><a href="#contact"><div>Contact</div></a>
 							</li>
 
 						</ul>
@@ -195,11 +193,11 @@
 					<div class="container clearfix">
 
 
-						<div class="col_half nobottommargin col_last">
+						<div class="col_full nobottommargin topmargin-lg center col_last">
 
-							<div class="heading-block topmargin-lg">
+							<!-- <div class="heading-block topmargin-lg">
 								<h2>Pharos Biologicals</h2>
-							</div>
+							</div> -->
 
 							<p class="lead" style="font-family: Aleo Light"><strong style="font-family: Aleo Bold">Pharos Biologicals, LLC</strong> is a privately-owned development stage company that develops vaccines and intellectual property intended to be licensed for commercial development to global pharmaceutical
 								companies that share the company’s values of balancing humanitarian and commercial concerns.
@@ -209,11 +207,11 @@
 
 						</div>
 
-						<div class="col_half nobottommargin">
+						<!-- <div class="col_half nobottommargin">
 
 							<img src="images/leaf.png" alt="Image" class="center-block" style="width:75%">
 
-						</div>
+						</div> -->
 
 
 					</div>
@@ -222,7 +220,7 @@
 
 				<div class="line"></div>
 
-				<div class="container clearfix">
+				<div class="container clearfix" id="zika">
 
 
 					<div class="col_full nobottommargin col_last">
@@ -230,7 +228,7 @@
 						<img src="images/zika-map2.png" alt="Image" class="center-block" style="width:100%">
 
 						<div class="heading-block topmargin-sm center">
-							<h2>The Zika Epidemic</h2>
+							<h2 style="font-family: Aleo Bold">The Zika Epidemic</h2>
 						</div>
 
 						<p class="lead" style="font-family:Aleo Light; font-size: 18px">Although humans fear attacks by sharks, and lions and snakes on average human deaths from these
@@ -257,6 +255,11 @@
 
 					</div>
 
+					<span href="" class="button button-full button-dark center tright topmargin">
+						<div class="container clearfix" style="font-family: Aleo">
+							On February 1, 2016 the World Health Organization (WHO)</br>declared Zika to be a <strong>global health crisis</strong>.
+						</div>
+					</span>
 
 				</div>
 
@@ -265,7 +268,7 @@
 				<div id="team" class="container clearfix topmargin-sm">
 
 					<div class="heading-block center">
-						<h2>Our Team</h2>
+						<h2 style="font-family: Aleo Bold">Our Team</h2>
 					</div>
 
 					<div class="col_one_third">
@@ -437,12 +440,12 @@
 						<div class="line"></div>
 
 
-					<div class="section notopmargin notopborder">
+					<div class="section notopmargin notopborder" id="media">
 						<div class="container clearfix center">
 							<div class="heading-block center nomargin">
-								<h3>Pharos in the News</h3>
+								<h3 style="font-family: Aleo Bold">Pharos in the News</h3>
 							</div>
-							<p></br>For press inquiries contact:</br>Daniel Waldman | danield@simplyeevolve.com | 443.326.3444</p>
+							<p style="font-family:Aleo Light;font-size: 18px"></br>For press inquiries contact:</br>Daniel Waldman | danield@simplyevolve.com | 443.326.3444</p>
 						</div>
 					</div>
 
@@ -492,7 +495,7 @@
 					<div class="col_full nobottommargin col_last">
 
 						<div class="heading-block topmargin-sm center">
-							<h2>Our Partners</h2>
+							<h2 style="font-family: Aleo Bold">Our Partners</h2>
 						</div>
 
 					</div>
@@ -540,84 +543,86 @@
 
 					<div class="line"></div>
 
-					<div class="row clearfix common-height">
+					<div class="row clearfix common-height center" id="contact">
 
-						<div class="col-md-6 center col-padding" style="background: url('images/zika-slide.jpg') center center no-repeat; background-size: cover;">
+						<h3 style="font-family: Aleo Bold">Send us an Email</h3>
+
+						<div id="contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+
+						<form class="nobottommargin" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
+
+							<div class="form-process"></div>
+
+							<div class="col_half">
+								<label for="template-contactform-name">Name <small>*</small></label>
+								<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control required" />
+							</div>
+
+							<div class="col_half col_last">
+								<label for="template-contactform-email">Email <small>*</small></label>
+								<input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control" />
+							</div>
+							<div class="clear"></div>
+
+
+							<div class="col_half ">
+								<label for="template-contactform-phone">Phone</label>
+								<input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control" />
+							</div>
+
+
+							<div class="col_half col_last">
+								<label for="template-contactform-subject">Subject <small>*</small></label>
+								<input type="text" id="template-contactform-subject" name="template-contactform-subject" value="" class="required sm-form-control" />
+							</div>
+
+
+							<div class="clear"></div>
+
+
+							<div class="col_full hidden">
+								<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
+							</div>
+
+							<div class="col_full">
+								<button class="button button-rounded button-large button-white button-light tright" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Send Message</button>
+							</div>
+
+						</form>
+
+						<script type="text/javascript">
+
+							$("#template-contactform").validate({
+								submitHandler: function(form) {
+									$('.form-process').fadeIn();
+									$(form).ajaxSubmit({
+										target: '#contact-form-result',
+										success: function() {
+											$('.form-process').fadeOut();
+											$('#template-contactform').find('.sm-form-control').val('');
+											$('#contact-form-result').attr('data-notify-msg', $('#contact-form-result').html()).html('');
+											SEMICOLON.widget.notifications($('#contact-form-result'));
+										}
+									});
+								}
+							});
+
+						</script>
+						<!-- <div class="col-md-12 center col-padding" style="background: url('images/zika-slide.jpg') center center no-repeat; background-size: cover;">
 							<div>&nbsp;</div>
 						</div>
 
 
 						<div class="col-md-6 center col-padding" style="">
 
-						</div>
+						</div> -->
 
 
 					</div>
 
 					<!-- Contact Form
 					============================================= -->
-					<h3>Send us an Email</h3>
 
-					<div id="contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
-
-					<form class="nobottommargin" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
-
-						<div class="form-process"></div>
-
-						<div class="col_one_third">
-							<label for="template-contactform-name">Name <small>*</small></label>
-							<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control required" />
-						</div>
-
-						<div class="col_one_third">
-							<label for="template-contactform-email">Email <small>*</small></label>
-							<input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control" />
-						</div>
-
-						<div class="col_one_third col_last">
-							<label for="template-contactform-phone">Phone</label>
-							<input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control" />
-						</div>
-
-						<div class="clear"></div>
-
-						<div class="col_one_third">
-							<label for="template-contactform-subject">Subject <small>*</small></label>
-							<input type="text" id="template-contactform-subject" name="template-contactform-subject" value="" class="required sm-form-control" />
-						</div>
-
-
-						<div class="clear"></div>
-
-
-						<div class="col_full hidden">
-							<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
-						</div>
-
-						<div class="col_full">
-							<button class="button button-3d nomargin" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Send Message</button>
-						</div>
-
-					</form>
-
-					<script type="text/javascript">
-
-						$("#template-contactform").validate({
-							submitHandler: function(form) {
-								$('.form-process').fadeIn();
-								$(form).ajaxSubmit({
-									target: '#contact-form-result',
-									success: function() {
-										$('.form-process').fadeOut();
-										$('#template-contactform').find('.sm-form-control').val('');
-										$('#contact-form-result').attr('data-notify-msg', $('#contact-form-result').html()).html('');
-										SEMICOLON.widget.notifications($('#contact-form-result'));
-									}
-								});
-							}
-						});
-
-					</script>
 
 
 
