@@ -18,8 +18,8 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
 		$botcheck = $_POST['template-contactform-botcheck'];
 
-		$toemail = ''; // Your Email Address
-		$toname = ''; // Your Name
+		$toemail = 'dwise@pharosbiologicals.com'; // Your Email Address
+		$toname = 'David Wise'; // Your Name
 
 		if( $botcheck == '' ) {
 
