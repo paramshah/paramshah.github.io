@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="47" viewBox="0 0 300 47">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 200px;
+        font-family: Aroly;
+      }
+
+      .cls-2 {
+        fill: #ffc000;
+      }
+    </style>
+  </defs>
+  <text id="illuminus" class="cls-1" transform="translate(-4.785 46.118) scale(0.293 0.293)">illumin<tspan class="cls-2">us</tspan></text>
+</svg>
